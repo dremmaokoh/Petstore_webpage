@@ -1,0 +1,151 @@
+main {
+margin: 5px;
+padding: 0;
+font: Roboto, Aerial;
+}
+.background {
+  width: 100%;
+  height: 100vh;
+  background-image: linear-gradient( rgba(0,0,0,0.75), rgba(0,0,0,0.75)),  url("dog.jpg");
+  background-size: cover;
+background-position: center;
+
+}
+.navbar{
+  display: flex;
+  justify-content: space-between ;
+  width: 90%;
+  padding:20px 0;
+  margin: auto;
+  align-items:center;
+}
+
+.logo{
+  width:80px;
+  border-radius: 20px;
+  object-fit: scale-down ;
+  object-position: center;
+  cursor:pointer;
+}
+
+.navbar ul{
+  display: grid;
+  display: inline-block;
+
+ 
+}
+
+
+
+
+@media (min-width: 550.05px) and (max-width: 750px) {
+  .navbar ul{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 750.05px) and (max-width: 950px) {
+  .navbar ul {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 950.05px) {
+  .navbar ul  {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin : 0 5px;
+  position: relative;
+  
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+}
+.navbar ul li::after {
+  content:'';
+  height: 2px;
+  width : 0;
+  background-color: yellowgreen;
+  position: absolute;
+  bottom:-1px;
+  left:0;
+  transition: 0.5s;
+
+}
+
+.navbar ul li:hover::after
+{
+  width : 100%;
+}
+
+.content{
+  width:100%;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  transform: translateY(-50%);
+  color:white;
+
+}
+.content p {
+  font-style: italic;
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+  font-size: 17px;
+}
+
+.content hi {
+  font-size: 70px;
+  margin-top: 80px;
+
+}
+
+button{
+  width:200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  border: 2px solid yellowgreen;
+  color :white;
+  background: transparent;
+  cursor:pointer;
+  position:relative;
+  overflow: hidden;
+}
+
+span{
+  background: yellowgreen;
+  height: 100%;
+  width:0;
+  border-radius: 25px;
+  position:absolute;
+  left: 0;
+  bottom:0;
+  z-index: -1;
+  transition:0.5s;
+}
+
+button:hover span{
+  width: 100%;
+}
+
+button:hover{
+  border:none;
+}
+
+.head{
+  display : grid;
+ grid-template-columns:1fr;
+  justify-content: center;
+  
+}
